@@ -1,8 +1,8 @@
 import cv2 
 from matplotlib import pyplot as plt
 import numpy as np
-path="E:\Projects\Automatic_Image_enhacement\c3_2501706.jpg"
-#"E:\object detection\coding ninjas\deeplearning4\enlight_before-min.jpg"
+path=""
+
 #image=cv2.imread(path)
 def equalize_hist(image):
     image_hsv=cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
@@ -46,5 +46,3 @@ def white_balance(img):
     result[:, :, 2] = result[:, :, 2] - ((avg_b - 128) * (result[:, :, 0] / 255.0) * 1.1)
     result = cv2.cvtColor(result, cv2.COLOR_LAB2BGR)
     return result
-#face buety deep learning for image enhance
-print(help(cv2.ximgproc))
